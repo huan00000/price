@@ -12,6 +12,7 @@ on:
     paths:
       - "*.py"
       - "symbol.txt"
+      - "id.txt"
       - "requirements.txt"
       - ".github/workflows/run.yml"
 
@@ -69,6 +70,11 @@ jobs:
               print $0 "\n"
             }
           ' "$raw_output" > price.txt
+
+      - name: Send matching prices to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python tele_gate.py price.txt id.txt
 
       - name: Commit Price.txt
         shell: bash
