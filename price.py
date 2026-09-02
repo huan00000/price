@@ -14,7 +14,7 @@ HYPE_data.js 更新完成：本次请求 8 条，当前共 501 条
 本次监测到HYPE的1个月涨跌幅为：+52.34%
 当前r值为+12.51%
 weak high，weak price = 87.58
-FINAL_PRICE = 88.46
+open short FINAL_PRICE = 88.46
 """
 
 import argparse
@@ -59,7 +59,8 @@ def analyze(base_asset, swing_length=50):
     if final_price is None:
         print("暂无潜在交易机会")
     else:
-        print(f"FINAL_PRICE = {final_price:.2f}")
+        action = "open short" if str(structure["weak_type"]).lower() == "high" else "open long"
+        print(f"{action} FINAL_PRICE = {final_price:.2f}")
 
     return final_price
 
