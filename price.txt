@@ -1,13 +1,13 @@
 ===== HYPE =====
 HYPE_data.js 更新完成：本次请求 501 条，当前共 501 条
-本次监测到HYPE的1个月涨跌幅为：+54.05%
-当前r值为+10.17%
-weak high，weak price = 87.62
-open short FINAL_PRICE = 88.50
+本次监测到HYPE的1个月涨跌幅为：+55.56%
+当前r值为+10.08%
+weak high，weak price = 87.63
+open short FINAL_PRICE = 88.51
 
 ===== SNDK =====
 SNDK_data.js 更新完成：本次请求 501 条，当前共 501 条
-本次监测到SNDK的1个月涨跌幅为：+23.66%
-当前r值为+10.42%
-weak high，weak price = 1628.68
-open short FINAL_PRICE = 1644.96
+本次监测到SNDK的1个月涨跌幅为：+24.62%
+当前r值为+10.29%
+weak high，weak price = 1628.45
+open short FINAL_PRICE = 1644.74
