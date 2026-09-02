@@ -1,0 +1,67 @@
+name: Calculate Price
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "*.py"
+      - "symbol.txt"
+      - "requirements.txt"
+      - ".github/workflows/run.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: calculate-price
+  cancel-in-progress: true
+
+jobs:
+  calculate-price:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up latest Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Read symbols and calculate prices
+        shell: bash
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET: ${{ secrets.API_SECRET }}
+        run: |
+          mapfile -t symbols < <(sed -e 's/\r$//' -e '/^[[:space:]]*$/d' symbol.txt)
+
+          if [ "${#symbols[@]}" -eq 0 ]; then
+            echo "symbol.txt does not contain any symbols." >&2
+            exit 1
+          fi
+
+          python price.py "${symbols[@]}" | tee price.txt
+
+      - name: Commit Price.txt
+        shell: bash
+        run: |
+          if git diff --quiet -- price.txt; then
+            echo "price.txt is unchanged; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add price.txt
+          git commit -m "chore: update calculated prices"
+          git push
