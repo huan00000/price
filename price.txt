@@ -1,6 +1,6 @@
 ===== SNDK =====
 SNDK_data.js 更新完成：本次请求 501 条，当前共 501 条
-本次监测到SNDK的1个月涨跌幅为：+23.76%
+本次监测到SNDK的1个月涨跌幅为：+23.80%
 当前r值为+10.39%
-weak high，weak price = 1625.02
-FINAL_PRICE = 1641.27
+weak high，weak price = 1625.09
+FINAL_PRICE = 1641.34
