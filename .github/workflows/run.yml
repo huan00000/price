@@ -2,6 +2,10 @@ name: Calculate Price
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+    - cron: "0 12 * * *"
+    - cron: "0 20 * * *"
   push:
     branches:
       - main
