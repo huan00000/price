@@ -43,6 +43,8 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           API_SECRET: ${{ secrets.API_SECRET }}
         run: |
+          set -o pipefail
+
           mapfile -t symbols < <(sed -e 's/\r$//' -e '/^[[:space:]]*$/d' symbol.txt)
 
           if [ "${#symbols[@]}" -eq 0 ]; then
@@ -50,7 +52,19 @@ jobs:
             exit 1
           fi
 
-          python price.py "${symbols[@]}" | tee price.txt
+          raw_output="$(mktemp)"
+          trap 'rm -f "$raw_output"' EXIT
+
+          # Keep the full calculation output in the Actions log, but only write
+          # symbol sections containing a numeric FINAL_PRICE to price.txt.
+          python price.py "${symbols[@]}" | tee "$raw_output"
+          awk '
+            BEGIN { RS = ""; ORS = "" }
+            /(^|\n)FINAL_PRICE[[:space:]]*=[[:space:]]*[0-9]+([.][0-9]+)?([[:space:]]*|$)/ {
+              if (found++) print "\n"
+              print $0 "\n"
+            }
+          ' "$raw_output" > price.txt
 
       - name: Commit Price.txt
         shell: bash
