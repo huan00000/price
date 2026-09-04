@@ -63,7 +63,9 @@ jobs:
           printf 'API_KEY=%s\nAPI_SECRET=%s\n' "$API_KEY" "$API_SECRET" > .env
           trap 'rm -f .env' EXIT
 
-          python size.py "${symbols[@]}" | tee size.txt
+          python size.py "${symbols[@]}" \
+            | sed '/^[[:space:]]*none[[:space:]]*$/d' \
+            | tee size.txt
 
       - name: Send calculated sizes to Telegram
         env:
