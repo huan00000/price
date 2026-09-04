@@ -1,7 +1,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol    : HYPE_USDT
-💰  Price     : 90.0713 USDT
+💰  Price     : 90.1087 USDT
 📉  Direction : Open Short
 📦  Size      : -14 张
    ======================
