@@ -1,4 +1,5 @@
 
+import argparse
 import requests
 from contextlib import redirect_stdout
 from decimal import Decimal, InvalidOperation, ROUND_DOWN
@@ -163,13 +164,27 @@ def size(contract_name=None):
     print(f"下单张数: {order_size}")
     return order_size
 
-def main():
-    try:
-        size()
-    except (requests.RequestException, RuntimeError, TypeError, ValueError) as exc:
-        print(f"执行失败: {exc}")
-        raise SystemExit(1) from exc
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="计算合约下单张数")
+    parser.add_argument(
+        "contracts",
+        nargs="*",
+        help="交易品种，例如 BTC ETH；不传参数时使用交互输入",
+    )
+    args = parser.parse_args(argv)
+
+    contracts = args.contracts or [None]
+    failed = False
+    for contract_name in contracts:
+        try:
+            order_size = size(contract_name)
+            if order_size is None:
+                print("none")
+        except (requests.RequestException, RuntimeError, TypeError, ValueError) as exc:
+            failed = True
+            print(f"执行失败: {exc}")
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

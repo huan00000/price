@@ -45,7 +45,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Read symbols and calculate prices
+      - name: Read symbols and calculate sizes
         shell: bash
         env:
           API_KEY: ${{ secrets.API_KEY }}
@@ -60,35 +60,27 @@ jobs:
             exit 1
           fi
 
-          raw_output="$(mktemp)"
-          trap 'rm -f "$raw_output"' EXIT
+          printf 'API_KEY=%s\nAPI_SECRET=%s\n' "$API_KEY" "$API_SECRET" > .env
+          trap 'rm -f .env' EXIT
 
-          # Keep the full calculation output in the Actions log, but only write
-          # symbol sections containing an open long/short FINAL_PRICE to price.txt.
-          python price.py "${symbols[@]}" | tee "$raw_output"
-          awk '
-            BEGIN { RS = ""; ORS = "" }
-            /(^|\n)open[[:space:]]+(long|short)[[:space:]]+FINAL_PRICE[[:space:]]*=[[:space:]]*[0-9]+([.][0-9]+)?([[:space:]]*|$)/ {
-              if (found++) print "\n"
-              print $0 "\n"
-            }
-          ' "$raw_output" > price.txt
+          python size.py "${symbols[@]}" | tee size.txt
 
-      - name: Send matching prices to Telegram
+      - name: Send calculated sizes to Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        run: python tele_gate.py price.txt id.txt
+        run: python tele_gate.py size.txt id.txt
 
-      - name: Commit Price.txt
+      - name: Commit size.txt
         shell: bash
         run: |
-          if git diff --quiet -- price.txt; then
-            echo "price.txt is unchanged; nothing to commit."
+          if git ls-files --error-unmatch size.txt >/dev/null 2>&1 \
+             && git diff --quiet -- size.txt; then
+            echo "size.txt is unchanged; nothing to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add price.txt
-          git commit -m "chore: update calculated prices"
+          git add size.txt
+          git commit -m "chore: update calculated sizes"
           git push
