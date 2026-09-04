@@ -1,13 +1,27 @@
 ===== HYPE =====
 HYPE_data.js 更新完成：本次请求 501 条，当前共 501 条
-本次监测到HYPE的1个月涨跌幅为：+54.47%
-当前r值为+10.14%
-weak high，weak price = 87.59
-open short FINAL_PRICE = 88.46
+本次监测到HYPE的1个月涨跌幅为：+56.36%
+当前r值为+11.18%
+weak high，weak price = 89.10
+open short FINAL_PRICE = 89.99
 
-===== SNDK =====
-SNDK_data.js 更新完成：本次请求 501 条，当前共 501 条
-本次监测到SNDK的1个月涨跌幅为：+23.68%
-当前r值为+10.42%
-weak high，weak price = 1622.99
-open short FINAL_PRICE = 1639.22
+===== XRP =====
+XRP_data.js 更新完成：本次请求 501 条，当前共 501 条
+本次监测到XRP的1个月涨跌幅为：+35.00%
+当前r值为+12.03%
+weak high，weak price = 1.50
+open short FINAL_PRICE = 1.51
+
+===== DOGE =====
+DOGE_data.js 更新完成：本次请求 501 条，当前共 501 条
+本次监测到DOGE的1个月涨跌幅为：+24.49%
+当前r值为+11.32%
+weak high，weak price = 0.09
+open short FINAL_PRICE = 0.09
+
+===== CL =====
+CL_data.js 更新完成：本次请求 501 条，当前共 501 条
+本次监测到CL的1个月涨跌幅为：+19.91%
+当前r值为+11.81%
+weak high，weak price = 93.48
+open short FINAL_PRICE = 94.41
