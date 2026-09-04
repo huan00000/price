@@ -3,7 +3,7 @@
 ✨  Symbol    : HYPE_USDT
 💰  Price     : 90.1087 USDT
 📉  Direction : Open Short
-📦  Size      : -14 张
+📦  Size      : -14 Contracts
    ======================
 
 
@@ -11,7 +11,7 @@
 ✨  Symbol    : XRP_USDT
 💰  Price     : 1.5160 USDT
 📉  Direction : Open Short
-📦  Size      : -11 张
+📦  Size      : -11 Contracts
    ======================
 
 
@@ -19,14 +19,14 @@
 ✨  Symbol    : DOGE_USDT
 💰  Price     : 0.0919 USDT
 📉  Direction : Open Short
-📦  Size      : -145 张
+📦  Size      : -145 Contracts
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol    : CL_USDT
-💰  Price     : 94.3961 USDT
+💰  Price     : 94.4048 USDT
 📉  Direction : Open Short
-📦  Size      : -182 张
+📦  Size      : -182 Contracts
    ======================
 
