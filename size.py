@@ -160,12 +160,18 @@ def size(contract_name=None):
 
     display_price = price_value.quantize(Decimal("0.0001"), rounding=ROUND_DOWN)
     direction_icon = "📉" if action == "open short" else "📈"
-    print("\n🚀 ====== Order Alert ======")
-    print(f"✨ Symbol:{contract_name}")
-    print(f"💰 Price:{display_price:.4f} USDT")
-    print(f"{direction_icon} Entry Direction:{action}")
-    print(f"📦 Size:{order_size} 张")
-    print("✨ ======================\n")
+    order_details = (
+        ("✨", "Symbol", contract_name),
+        ("💰", "Price", f"{display_price:.4f} USDT"),
+        (direction_icon, "Entry Direction", action),
+        ("📦", "Size", f"{order_size} 张"),
+    )
+    label_width = max(len(label) for _, label, _ in order_details)
+
+    print("\n🚀 ─────── Order Alert ───────")
+    for icon, label, value in order_details:
+        print(f"{icon}  {label:<{label_width}} : {value}")
+    print("   ────────────────────────────\n")
     return order_size
 
 def main(argv=None):
