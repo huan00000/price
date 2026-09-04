@@ -33,9 +33,9 @@ def _get_price_and_action(contract_name):
         return None, None
 
     action = (
-        "open short"
+        "Open Short"
         if str(structure["weak_type"]).lower() == "high"
-        else "open long"
+        else "Open Long"
     )
     return final_price, action
 
@@ -156,22 +156,22 @@ def size(contract_name=None):
     if unsigned_size == 0:
         return None
 
-    order_size = -unsigned_size if action == "open short" else unsigned_size
+    order_size = -unsigned_size if action == "Open Short" else unsigned_size
 
     display_price = price_value.quantize(Decimal("0.0001"), rounding=ROUND_DOWN)
-    direction_icon = "📉" if action == "open short" else "📈"
+    direction_icon = "📉" if action == "Open Short" else "📈"
     order_details = (
         ("✨", "Symbol", contract_name),
         ("💰", "Price", f"{display_price:.4f} USDT"),
-        (direction_icon, "Entry Direction", action),
+        (direction_icon, "Direction", action),
         ("📦", "Size", f"{order_size} 张"),
     )
     label_width = max(len(label) for _, label, _ in order_details)
 
-    print("\n🚀 ─────── Order Alert ───────")
+    print("\n🚀 ====== Order Alert ======")
     for icon, label, value in order_details:
         print(f"{icon}  {label:<{label_width}} : {value}")
-    print("   ────────────────────────────\n")
+    print("   ======================\n")
     return order_size
 
 def main(argv=None):
