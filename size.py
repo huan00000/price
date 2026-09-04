@@ -1,11 +1,33 @@
 
 import argparse
 import requests
+import unicodedata
 from contextlib import redirect_stdout
 from decimal import Decimal, InvalidOperation, ROUND_DOWN
 from io import StringIO
 
 import amount as amount_module
+
+
+def _display_width(text):
+    """返回文本在常见等宽终端中占用的列数。"""
+    width = 0
+    for char in text:
+        if unicodedata.combining(char) or char in ("\ufe0e", "\ufe0f", "\u200d"):
+            continue
+        width += 2 if unicodedata.east_asian_width(char) in ("F", "W") else 1
+    return width
+
+
+def _format_order_detail_lines(order_details):
+    """以最长的完整前缀为基准，补空格使所有冒号纵向对齐。"""
+    prefixes = [f"{icon}  {label}" for icon, label, _ in order_details]
+    baseline_width = max(_display_width(prefix) for prefix in prefixes)
+
+    return [
+        f"{prefix}{' ' * (baseline_width - _display_width(prefix))} : {value}"
+        for prefix, (_, _, value) in zip(prefixes, order_details)
+    ]
 
 
 def normalize_contract_name(contract_name):
@@ -166,11 +188,9 @@ def size(contract_name=None):
         (direction_icon, "Direction", action),
         ("📦", "Size", f"{order_size} 张"),
     )
-    label_width = max(len(label) for _, label, _ in order_details)
-
     print("\n🚀 ====== Order Alert ======")
-    for icon, label, value in order_details:
-        print(f"{icon}  {label:<{label_width}} : {value}")
+    for line in _format_order_detail_lines(order_details):
+        print(line)
     print("   ======================\n")
     return order_size
 
