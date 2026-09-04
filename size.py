@@ -159,9 +159,13 @@ def size(contract_name=None):
     order_size = -unsigned_size if action == "open short" else unsigned_size
 
     display_price = price_value.quantize(Decimal("0.01"), rounding=ROUND_DOWN)
-    print(f"下单价格: {display_price:.2f}")
-    print(f"开仓方向: {action}")
-    print(f"下单张数: {order_size}")
+    direction_icon = "📉" if action == "open short" else "📈"
+    print("\n🚀 ====== 下单信息 ======")
+    print(f"✨ 下单品种：{contract_name}")
+    print(f"💰 下单价格：{display_price:.4f} USDT")
+    print(f"{direction_icon} 开仓方向：{action}")
+    print(f"📦 下单张数：{order_size} 张")
+    print("✨ ======================\n")
     return order_size
 
 def main(argv=None):
