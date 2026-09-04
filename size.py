@@ -158,7 +158,7 @@ def size(contract_name=None):
 
     order_size = -unsigned_size if action == "open short" else unsigned_size
 
-    display_price = price_value.quantize(Decimal("0.01"), rounding=ROUND_DOWN)
+    display_price = price_value.quantize(Decimal("0.0001"), rounding=ROUND_DOWN)
     direction_icon = "📉" if action == "open short" else "📈"
     print("\n🚀 ====== 下单信息 ======")
     print(f"✨ 下单品种：{contract_name}")
