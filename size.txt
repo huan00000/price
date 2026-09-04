@@ -1,32 +1,32 @@
 
-🚀 ====== 下单信息 ======
-✨ 下单品种：HYPE_USDT
-💰 下单价格：89.9450 USDT
-📉 开仓方向：open short
-📦 下单张数：-14 张
+🚀 ====== Order Alert ======
+✨ Symbol:HYPE_USDT
+💰 Price:89.9450 USDT
+📉 Entry Direction:open short
+📦 Size:-14 张
 ✨ ======================
 
 
-🚀 ====== 下单信息 ======
-✨ 下单品种：XRP_USDT
-💰 下单价格：1.5119 USDT
-📉 开仓方向：open short
-📦 下单张数：-11 张
+🚀 ====== Order Alert ======
+✨ Symbol:XRP_USDT
+💰 Price:1.5119 USDT
+📉 Entry Direction:open short
+📦 Size:-11 张
 ✨ ======================
 
 
-🚀 ====== 下单信息 ======
-✨ 下单品种：DOGE_USDT
-💰 下单价格：0.0916 USDT
-📉 开仓方向：open short
-📦 下单张数：-145 张
+🚀 ====== Order Alert ======
+✨ Symbol:DOGE_USDT
+💰 Price:0.0916 USDT
+📉 Entry Direction:open short
+📦 Size:-145 张
 ✨ ======================
 
 
-🚀 ====== 下单信息 ======
-✨ 下单品种：CL_USDT
-💰 下单价格：94.3868 USDT
-📉 开仓方向：open short
-📦 下单张数：-182 张
+🚀 ====== Order Alert ======
+✨ Symbol:CL_USDT
+💰 Price:94.3947 USDT
+📉 Entry Direction:open short
+📦 Size:-182 张
 ✨ ======================
 
