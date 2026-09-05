@@ -67,6 +67,9 @@ jobs:
             | sed '/^[[:space:]]*none[[:space:]]*$/d' \
             | tee size.txt
 
+          printf '\n===== Orders Times: %s =====\n' "$(date +%s)" \
+            | tee -a size.txt
+
           touch float.js
           chmod u+rw float.js
           python float.py "${symbols[@]}" --output float.js
