@@ -1,12 +1,17 @@
 
 import argparse
+import json
 import requests
 import unicodedata
 from contextlib import redirect_stdout
 from decimal import Decimal, InvalidOperation, ROUND_DOWN
 from io import StringIO
+from pathlib import Path
 
 import amount as amount_module
+
+
+PRICE_STEP_FILE = Path(__file__).with_name("float.js")
 
 
 def _display_width(text):
@@ -39,6 +44,30 @@ def normalize_contract_name(contract_name):
     if not normalized:
         raise ValueError("交易品种不能为空")
     return normalized if normalized.endswith("_USDT") else f"{normalized}_USDT"
+
+
+def get_price_step(contract_name, path=PRICE_STEP_FILE):
+    """从 float.js 读取合约的最大价格 step。"""
+    contract_name = normalize_contract_name(contract_name)
+    try:
+        entries = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"无法读取价格 step 映射表 {path}: {exc}") from exc
+
+    for entry in entries:
+        if entry.get("contract") != contract_name:
+            continue
+        try:
+            step = Decimal(str(entry["step"]))
+        except (KeyError, InvalidOperation, ValueError) as exc:
+            raise RuntimeError(
+                f"{contract_name} 的价格 step 无效: {entry.get('step')!r}"
+            ) from exc
+        if not step.is_finite() or step <= 0:
+            raise RuntimeError(f"{contract_name} 的价格 step 必须大于 0: {step}")
+        return step
+
+    raise RuntimeError(f"价格 step 映射表中没有 {contract_name}")
 
 def _get_price_and_action(contract_name):
     """获取挂单价格以及开仓方向，保证两者来自同一次行情分析。"""
@@ -180,11 +209,13 @@ def size(contract_name=None):
 
     order_size = -unsigned_size if action == "Open Short" else unsigned_size
 
-    display_price = price_value.quantize(Decimal("0.0001"), rounding=ROUND_DOWN)
+    price_step = get_price_step(contract_name)
+    decimal_places = max(0, -price_step.as_tuple().exponent)
+    display_price = price_value.quantize(price_step, rounding=ROUND_DOWN)
     direction_icon = "📉" if action == "Open Short" else "📈"
     order_details = (
         ("✨", "Symbol", contract_name),
-        ("💰", "Price", f"{display_price:.4f} USDT"),
+        ("💰", "Price", f"{display_price:.{decimal_places}f} USDT"),
         (direction_icon, "Direction", action),
         ("📦", "Size", f"{order_size} Contracts"),
     )

@@ -67,22 +67,26 @@ jobs:
             | sed '/^[[:space:]]*none[[:space:]]*$/d' \
             | tee size.txt
 
+          touch float.js
+          chmod u+rw float.js
+          python float.py "${symbols[@]}" --output float.js
+
       - name: Send calculated sizes to Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: python tele_gate.py size.txt id.txt
 
-      - name: Commit size.txt
+      - name: Commit generated files
         shell: bash
         run: |
-          if git ls-files --error-unmatch size.txt >/dev/null 2>&1 \
-             && git diff --quiet -- size.txt; then
-            echo "size.txt is unchanged; nothing to commit."
+          if git diff --quiet -- size.txt float.js \
+             && [ -z "$(git ls-files --others --exclude-standard -- size.txt float.js)" ]; then
+            echo "Generated files are unchanged; nothing to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add size.txt
-          git commit -m "chore: update calculated sizes"
+          git add size.txt float.js
+          git commit -m "chore: update calculated prices"
           git push
