@@ -185,7 +185,7 @@ def size(contract_name=None):
     order_details = (
         ("✨", "Symbol", contract_name),
         ("💰", "Price", f"{display_price:.4f} USDT"),
-        (direction_icon, "Direction", action),
+        (direction_icon, "Side", action),
         ("📦", "Size", f"{order_size} Contracts"),
     )
     print("\n🚀 ====== Order Alert ======")
