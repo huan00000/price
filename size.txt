@@ -1,7 +1,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : XRP_USDT
-💰  Price      : 1.506 USDT
+💰  Price      : 1.5066 USDT
 📉  Side       : Open Short
 📦  Size       : -11 Contracts
    ======================
@@ -17,7 +17,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SUI_USDT
-💰  Price      : 0.8250 USDT
+💰  Price      : 0.8 USDT
 📉  Side       : Open Short
 📦  Size       : -110 Contracts
    ======================
@@ -25,7 +25,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SNDK_USDT
-💰  Price      : 1832.02 USDT
+💰  Price      : 1831.33 USDT
 📉  Side       : Open Short
 📦  Size       : -7 Contracts
    ======================
@@ -41,8 +41,10 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SUI_USDT
-💰  Price      : 0.8250 USDT
+💰  Price      : 0.8 USDT
 📉  Side       : Open Short
 📦  Size       : -110 Contracts
    ======================
 
+
+===== Orders Times: 1788623530 =====
