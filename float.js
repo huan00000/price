@@ -5,19 +5,19 @@
   },
   {
     "contract": "ETH_USDT",
-    "step": "0.1"
+    "step": "1"
   },
   {
     "contract": "SOL_USDT",
-    "step": "0.01"
+    "step": "0.1"
   },
   {
     "contract": "HYPE_USDT",
-    "step": "0.01"
+    "step": "0.001"
   },
   {
     "contract": "XRP_USDT",
-    "step": "0.0001"
+    "step": "0.001"
   },
   {
     "contract": "DOGE_USDT",
@@ -25,11 +25,11 @@
   },
   {
     "contract": "SUI_USDT",
-    "step": "0.001"
+    "step": "0.0001"
   },
   {
     "contract": "SPCX_USDT",
-    "step": "0.01"
+    "step": "0.1"
   },
   {
     "contract": "SNDK_USDT",
@@ -41,6 +41,6 @@
   },
   {
     "contract": "XAU_USDT",
-    "step": "0.01"
+    "step": "0.1"
   }
 ]
