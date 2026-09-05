@@ -1,7 +1,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : XRP_USDT
-💰  Price      : 1.506 USDT
+💰  Price      : 1.5066 USDT
 📉  Side       : Open Short
 📦  Size       : -11 Contracts
    ======================
@@ -33,18 +33,10 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : CL_USDT
-💰  Price      : 94.19 USDT
+💰  Price      : 94.1 USDT
 📉  Side       : Open Short
 📦  Size       : -181 Contracts
    ======================
 
 
-🚀 ====== Order Alert ======
-✨  Symbol     : SUI_USDT
-💰  Price      : 0.824 USDT
-📉  Side       : Open Short
-📦  Size       : -110 Contracts
-   ======================
-
-
-Orders Times: 1788623875 
+Orders Times: 1788623928 
