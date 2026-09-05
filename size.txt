@@ -1,7 +1,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : XRP_USDT
-💰  Price      : 1.507 USDT
+💰  Price      : 1.5065 USDT
 📉  Side       : Open Short
 📦  Size       : -11 Contracts
    ======================
@@ -9,7 +9,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : DOGE_USDT
-💰  Price      : 0.09147 USDT
+💰  Price      : 0.09143 USDT
 📉  Side       : Open Short
 📦  Size       : -144 Contracts
    ======================
@@ -17,7 +17,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SNDK_USDT
-💰  Price      : 1835.29 USDT
+💰  Price      : 1834.22 USDT
 📉  Side       : Open Short
 📦  Size       : -7 Contracts
    ======================
@@ -25,7 +25,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : CL_USDT
-💰  Price      : 94.19 USDT
+💰  Price      : 94.16 USDT
 📉  Side       : Open Short
 📦  Size       : -181 Contracts
    ======================
