@@ -9,7 +9,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol : DOGE_USDT
-💰  Price  : 0.0914 USDT
+💰  Price  : 0.0915 USDT
 📉  Side   : Open Short
 📦  Size   : -144 Contracts
    ======================
@@ -17,7 +17,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol : SNDK_USDT
-💰  Price  : 1835.9310 USDT
+💰  Price  : 1836.0700 USDT
 📉  Side   : Open Short
 📦  Size   : -7 Contracts
    ======================
@@ -25,7 +25,7 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol : CL_USDT
-💰  Price  : 94.2073 USDT
+💰  Price  : 94.2000 USDT
 📉  Side   : Open Short
 📦  Size   : -181 Contracts
    ======================
