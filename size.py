@@ -215,8 +215,8 @@ def size(contract_name=None):
     direction_icon = "📉" if action == "Open Short" else "📈"
     order_details = (
         ("✨", "Symbol", contract_name),
-        ("💰", "Price", f"{display_price:.{decimal_places}f} USDT"),
-        (direction_icon, "Direction", action),
+        ("💰", "Price", f"{display_price:.4f} USDT"),
+        (direction_icon, "Side", action),
         ("📦", "Size", f"{order_size} Contracts"),
     )
     print("\n🚀 ====== Order Alert ======")
