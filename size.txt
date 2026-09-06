@@ -1,34 +1,34 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : HYPE_USDT
-💰  Price      : 91.361 USDT
+💰  Price      : 91.376 USDT
 📉  Side       : Open Short
-📦  Size       : -15 Contracts
+📦  Size       : -14 Contracts
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : DOGE_USDT
-💰  Price      : 0.09708 USDT
+💰  Price      : 0.09698 USDT
 📉  Side       : Open Short
-📦  Size       : -141 Contracts
+📦  Size       : -140 Contracts
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SUI_USDT
-💰  Price      : 0.8302 USDT
+💰  Price      : 0.8362 USDT
 📉  Side       : Open Short
-📦  Size       : -114 Contracts
+📦  Size       : -112 Contracts
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SNDK_USDT
-💰  Price      : 1826.81 USDT
+💰  Price      : 1827.0 USDT
 📉  Side       : Open Short
 📦  Size       : -7 Contracts
    ======================
 
 
-Orders Times: 1788717813 
+Orders Times: 1788732169 
