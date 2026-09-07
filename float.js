@@ -5,7 +5,7 @@
   },
   {
     "contract": "ETH_USDT",
-    "step": "0.01"
+    "step": "0.1"
   },
   {
     "contract": "SOL_USDT",
@@ -13,11 +13,11 @@
   },
   {
     "contract": "HYPE_USDT",
-    "step": "0.001"
+    "step": "0.01"
   },
   {
     "contract": "XRP_USDT",
-    "step": "0.0001"
+    "step": "0.001"
   },
   {
     "contract": "DOGE_USDT",
