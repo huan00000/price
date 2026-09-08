@@ -208,6 +208,7 @@ def size(contract_name=None):
         return None
 
     order_size = -unsigned_size if action == "Open Short" else unsigned_size
+    amount_valu = -amount_value if action == "Open Short" else amount_value
 
     price_step = get_price_step(contract_name)
     decimal_places = max(0, -price_step.as_tuple().exponent)
@@ -218,7 +219,7 @@ def size(contract_name=None):
         ("💰", "Price   ", f"{display_price} USDT"),
         (direction_icon, "Side      ", action),
         ("📦", "Size    ", f"{order_size} Contracts"),
-        ("📦", "Value    ", f"{amount_value} U"),
+        ("📦", "Value    ", f"{amount_valu} U"),
     )
     print("\n🚀 ====== Order Alert ======")
     for line in _format_order_detail_lines(order_details):
