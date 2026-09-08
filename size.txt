@@ -1,20 +1,20 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : DOGE_USDT
-💰  Price      : 0.09707 USDT
+💰  Price      : 0.0970 USDT
 📉  Side       : Open Short
-📦  Size       : -142 Contracts
-📦  Value      : 138.55 U
+📦  Size       : -141 Contracts
+📦  Value      : 137.76 U
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SUI_USDT
-💰  Price      : 0.8660 USDT
+💰  Price      : 0.8662 USDT
 📉  Side       : Open Short
-📦  Size       : -110 Contracts
-📦  Value      : 95.59 U
+📦  Size       : -109 Contracts
+📦  Value      : 95.05 U
    ======================
 
 
-Orders Times: 1788869865421 
+Orders Times: 1788871116897 
