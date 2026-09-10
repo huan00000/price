@@ -5,7 +5,7 @@
   },
   {
     "contract": "ETH_USDT",
-    "step": "0.1"
+    "step": "0.01"
   },
   {
     "contract": "SOL_USDT",
@@ -29,7 +29,7 @@
   },
   {
     "contract": "SPCX_USDT",
-    "step": "1"
+    "step": "0.01"
   },
   {
     "contract": "SNDK_USDT",
