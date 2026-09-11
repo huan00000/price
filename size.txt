@@ -1,11 +1,20 @@
 
 🚀 ====== Order Alert ======
-✨  Symbol     : CL_USDT
-💰  Price      : 108.5 USDT
+✨  Symbol     : ETH_USDT
+💰  Price      : 2727.71 USDT
 📉  Side       : Open Short
-📦  Size       : -170 Contracts
-📦  Value      : -185.4 U
+📦  Size       : -12 Contracts
+📦  Value      : -328.21 U
    ======================
 
 
-Orders Times: 1789130262727 
+🚀 ====== Order Alert ======
+✨  Symbol     : CL_USDT
+💰  Price      : 108.4 USDT
+📉  Side       : Open Short
+📦  Size       : -171 Contracts
+📦  Value      : -185.51 U
+   ======================
+
+
+Orders Times: 1789143240336 
