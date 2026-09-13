@@ -41,6 +41,6 @@
   },
   {
     "contract": "XAU_USDT",
-    "step": "0.1"
+    "step": "0.01"
   }
 ]
