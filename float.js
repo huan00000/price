@@ -21,11 +21,11 @@
   },
   {
     "contract": "DOGE_USDT",
-    "step": "0.00001"
+    "step": "0.0001"
   },
   {
     "contract": "SUI_USDT",
-    "step": "0.001"
+    "step": "0.0001"
   },
   {
     "contract": "SPCX_USDT",
@@ -37,7 +37,7 @@
   },
   {
     "contract": "CL_USDT",
-    "step": "0.1"
+    "step": "0.01"
   },
   {
     "contract": "XAU_USDT",
@@ -45,6 +45,6 @@
   },
   {
     "contract": "SPX500_USDT",
-    "step": "0.01"
+    "step": "1"
   }
 ]
