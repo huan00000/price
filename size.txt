@@ -1,11 +1,2 @@
 
-🚀 ====== Order Alert ======
-✨  Symbol     : CL_USDT
-💰  Price      : 108.2 USDT
-📉  Side       : Open Short
-📦  Size       : -199 Contracts
-📦  Value      : -216.08 U
-   ======================
-
-
-Orders Times: 1789663169978 
+Orders Times: 1789673685629 
