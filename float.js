@@ -13,7 +13,7 @@
   },
   {
     "contract": "HYPE_USDT",
-    "step": "0.001"
+    "step": "0.01"
   },
   {
     "contract": "XRP_USDT",
@@ -29,15 +29,15 @@
   },
   {
     "contract": "SPCX_USDT",
-    "step": "0.1"
-  },
-  {
-    "contract": "SNDK_USDT",
     "step": "0.01"
   },
   {
-    "contract": "CL_USDT",
+    "contract": "SNDK_USDT",
     "step": "0.1"
+  },
+  {
+    "contract": "CL_USDT",
+    "step": "0.01"
   },
   {
     "contract": "XAU_USDT",
@@ -45,6 +45,6 @@
   },
   {
     "contract": "SPX500_USDT",
-    "step": "0.01"
+    "step": "0.1"
   }
 ]
