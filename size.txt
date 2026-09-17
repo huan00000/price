@@ -1,2 +1,11 @@
 
-Orders Times: 1789673685629 
+🚀 ====== Order Alert ======
+✨  Symbol     : HYPE_USDT
+💰  Price      : 85.884 USDT
+📉  Side       : Open Short
+📦  Size       : -19 Contracts
+📦  Value      : -167.52 U
+   ======================
+
+
+Orders Times: 1789685168816 
