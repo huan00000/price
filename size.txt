@@ -1,38 +1,38 @@
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SOL_USDT
-💰  Price      : 116.34 USDT
+💰  Price      : 116.36 USDT
 📉  Side       : Open Short
 📦  Size       : -1 Contracts
-📦  Value      : -192.66 U
+📦  Value      : -196.62 U
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : HYPE_USDT
-💰  Price      : 96.522 USDT
+💰  Price      : 96.494 USDT
 📉  Side       : Open Short
 📦  Size       : -15 Contracts
-📦  Value      : -149.36 U
+📦  Value      : -152.44 U
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : DOGE_USDT
-💰  Price      : 0.0916 USDT
+💰  Price      : 0.09322 USDT
 📉  Side       : Open Short
-📦  Size       : -162 Contracts
-📦  Value      : -149.36 U
+📦  Size       : -163 Contracts
+📦  Value      : -152.44 U
    ======================
 
 
 🚀 ====== Order Alert ======
 ✨  Symbol     : SUI_USDT
-💰  Price      : 0.8910 USDT
+💰  Price      : 0.892 USDT
 📉  Side       : Open Short
-📦  Size       : -115 Contracts
-📦  Value      : -103.2 U
+📦  Size       : -117 Contracts
+📦  Value      : -105.16 U
    ======================
 
 
-Orders Times: 1789832533437 
+Orders Times: 1789842407938 
