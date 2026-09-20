@@ -13,15 +13,15 @@
   },
   {
     "contract": "HYPE_USDT",
-    "step": "0.001"
+    "step": "0.01"
   },
   {
     "contract": "XRP_USDT",
-    "step": "0.001"
+    "step": "0.01"
   },
   {
     "contract": "DOGE_USDT",
-    "step": "0.0001"
+    "step": "0.00001"
   },
   {
     "contract": "SUI_USDT",
@@ -45,6 +45,6 @@
   },
   {
     "contract": "SPX500_USDT",
-    "step": "0.01"
+    "step": "0.1"
   }
 ]
