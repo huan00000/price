@@ -33,7 +33,7 @@
   },
   {
     "contract": "SNDK_USDT",
-    "step": "0.01"
+    "step": "0.1"
   },
   {
     "contract": "CL_USDT",
@@ -45,6 +45,6 @@
   },
   {
     "contract": "SPX500_USDT",
-    "step": "1"
+    "step": "0.01"
   }
 ]
