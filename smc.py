@@ -247,9 +247,9 @@ def ratio(weak, strong, o):
 def classify_ratio(value):
     """按 r 值判断当前是否存在潜在交易机会。"""
     value = float(value)
-    if value > 0.10:
+    if value > 0.15:
         return "涨势过猛，有潜在开空交易机会。"
-    if value < -0.10:
+    if value < -0.15:
         return "跌势太猛，有潜在开多交易机会。"
     return "波动较小，没有潜在交易机会。"
 
