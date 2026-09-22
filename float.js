@@ -13,7 +13,7 @@
   },
   {
     "contract": "HYPE_USDT",
-    "step": "0.01"
+    "step": "0.001"
   },
   {
     "contract": "XRP_USDT",
