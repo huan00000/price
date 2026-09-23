@@ -9,11 +9,11 @@
   },
   {
     "contract": "SOL_USDT",
-    "step": "0.1"
+    "step": "0.01"
   },
   {
     "contract": "HYPE_USDT",
-    "step": "0.01"
+    "step": "0.001"
   },
   {
     "contract": "XRP_USDT",
@@ -21,7 +21,7 @@
   },
   {
     "contract": "DOGE_USDT",
-    "step": "0.0001"
+    "step": "0.00001"
   },
   {
     "contract": "SUI_USDT",
@@ -33,7 +33,7 @@
   },
   {
     "contract": "SNDK_USDT",
-    "step": "0.1"
+    "step": "0.01"
   },
   {
     "contract": "CL_USDT",

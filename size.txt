@@ -4,8 +4,8 @@
 💰  Price      : 122.4 USDT
 📉  Side       : Open Short
 📦  Size       : -1 Contracts
-📦  Value      : -163.34 U
+📦  Value      : -163.01 U
    ======================
 
 
-Orders Times: 1790191734188 
+Orders Times: 1790203897656 
