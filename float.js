@@ -1,7 +1,7 @@
 [
   {
     "contract": "BTC_USDT",
-    "step": "1"
+    "step": "0.1"
   },
   {
     "contract": "ETH_USDT",
